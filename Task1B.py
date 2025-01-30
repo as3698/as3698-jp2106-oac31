@@ -1,5 +1,4 @@
 from floodsystem.geo import stations_by_distance
-from floodsystem.station import MonitoringStation
 from floodsystem.stationdata import build_station_list
 import numpy as np
 

@@ -7,9 +7,7 @@ geographical data.
 """
 
 #from .utils import sorted_by_key  # noqa
-from floodsystem.utils import sorted_by_key
-from floodsystem.station import MonitoringStation
-from floodsystem.stationdata import build_station_list
+
 import numpy as np
 
 def stations_by_distance(stations, p):
