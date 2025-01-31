@@ -6,17 +6,6 @@ geographical data.
 
 """
 
-#from .utils import sorted_by_key  # noqa
-
-#Uses geo.rivers_with_station to print how many rivers have at least one monitoring station (Representative result: 843) and prints the first 10 of these rivers in alphabetical order. Representative output:
-
-
-
-
-
-#from floodsystem.stationdata import build_station_list
-
-
 def rivers_with_station(stations):
     from floodsystem.stationdata import build_station_list
     stations = build_station_list()
