@@ -14,4 +14,4 @@ output_c = stations_within_radius(stations, centre, r)
 
 final = [(station[0].name) for station in output_c]
 final.sort()
-print(final)
+assert final == ['Bin Brook', 'Cambridge Baits Bite', "Cambridge Byron's Pool", 'Cambridge Jesus Lock', 'Comberton', 'Dernford', 'Girton', 'Haslingfield Burnt Mill', 'Lode', 'Oakington', 'Stapleford']
