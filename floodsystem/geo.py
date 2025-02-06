@@ -39,9 +39,7 @@ def stations_within_radius(stations, centre, r):
         lon_1 = (centre[1])
         lat_2 = (station.coord[0])
         lon_2 = (station.coord[1])
-        cam = (lat_1, lon_1)
-        place = (lat_2, lon_2)
-        distance_c = haversine(cam, place)
+        distance_c = haversine((lat_1, lon_1), (lat_2, lon_2))
         #distance_c = 2 * radius * np.arcsin(np.sqrt(np.sin((lat_2 - lat_1) / 2)**2 + np.cos(lat_1) * np.cos(lat_2) * np.sin((lon_2 - lon_1) / 2)**2))
         if distance_c <= r:
             within.append((station, float(distance_c)))
