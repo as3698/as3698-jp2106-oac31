@@ -25,15 +25,15 @@ def stations_by_river(stations):
     for station in stations:
         if station.river == 'River Aire':
             stations_ra.add(station.name)
-    print(sorted(stations_ra))
+    print("Stations by River Aire:",sorted(stations_ra))
     for station in stations:
         if station.river == 'River Cam':
             stations_rc.add(station.name)
-    print(sorted(stations_rc))
+    print("Stations by River Cam:",sorted(stations_rc))
     for station in stations:
         if station.river == 'River Thames':
             stations_rt.add(station.name)
-    print(sorted(stations_rt))
+    print("Stations by River Thames:",sorted(stations_rt))
 
 
 def rivers_by_station_number(stations, N):
