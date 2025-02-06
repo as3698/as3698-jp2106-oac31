@@ -6,6 +6,10 @@ geographical data.
 
 """
 
+import numpy as np
+from .utils import sorted_by_key
+from haversine import haversine
+
 def rivers_with_station(stations):
     from floodsystem.stationdata import build_station_list
     stations = build_station_list()
@@ -47,28 +51,6 @@ def rivers_by_station_number(stations, N):
     river_list.sort(key=lambda x: x[1], reverse=True)
     print((river_list)[:N])
     
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-
-import numpy as np
-from .utils import sorted_by_key
-from haversine import haversine
 
 def stations_by_distance(stations, p):
     radius = 6378
