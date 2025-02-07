@@ -13,8 +13,12 @@ def rivers_with_station(stations):
     for station in stations:
         if station.river:
             stations_d.add(station.river)
-    print("Number of rivers with at least one monitoring station:", len(stations_d))
+    print("Number of rivers with at least one monitoring station: " + str(len(stations_d)))
     print(sorted(stations_d)[:10])
+    return(len(stations_d)), sorted(stations_d)[:10]
+    
+    
+    
 
 def stations_by_river(stations):
     from floodsystem.stationdata import build_station_list
@@ -34,6 +38,7 @@ def stations_by_river(stations):
         if station.river == 'River Thames':
             stations_rt.add(station.name)
     print("Stations by River Thames:",sorted(stations_rt))
+    return(stations_ra, stations_rc, stations_rt)
 
 
 def rivers_by_station_number(stations, N):
@@ -46,6 +51,7 @@ def rivers_by_station_number(stations, N):
     river_list = list(rivers_station_count.items())
     river_list.sort(key=lambda x: x[1], reverse=True)
     print((river_list)[:N])
+    return((river_list)[:N])
     
 
 
