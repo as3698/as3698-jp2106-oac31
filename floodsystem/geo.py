@@ -54,9 +54,6 @@ def rivers_by_station_number(stations, N):
 
 def stations_by_distance(stations, p):
     radius = 6378
-    
-    
-
     #This function is supposed to calculate the distance between two points
     distances = []
     
@@ -66,6 +63,7 @@ def stations_by_distance(stations, p):
         lat_2 = np.radians(station.coord[0])
         lon_2 = np.radians(station.coord[1])
         distance = 2 * radius * np.arcsin(np.sqrt(np.sin((lat_2 - lat_1) / 2)**2 + np.cos(lat_1) * np.cos(lat_2) * np.sin((lon_2 - lon_1) / 2)**2))
+        #distance = haversine((lat_1, lon_1), (lat_2, lon_2))
         distances.append((station, float(distance)))
     sorted_data = sorted_by_key(distances, 1)
     
