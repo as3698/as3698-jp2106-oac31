@@ -16,7 +16,7 @@ def test_build_station_list():
 
     # Find station 'Cam'
     for station in stations:
-        if station.name == 'Cam':
+        if station.name == 'Bourton Dickler':
             station_cam = station
             break
 
