@@ -7,11 +7,22 @@ import numpy as np
     
 r = 10
 centre = (52.2053, 0.1218)
-stations = build_station_list()
 
-output_c = stations_within_radius(stations, centre, r)
+def task_1C(centre, r):
+    stations = build_station_list()
+
+    output_c = stations_within_radius(stations, centre, r)
 
 
-final = [(station[0].name) for station in output_c]
-final.sort()
-print(final)
+    final = [(station[0].name) for station in output_c]
+    final.sort()
+    return final
+#stations = build_station_list()
+
+#output_c = stations_within_radius(stations, centre, r)
+
+
+#final = [(station[0].name) for station in output_c]
+#final.sort()
+#print(final)
+print(task_1C(centre, r))

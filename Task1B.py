@@ -3,11 +3,15 @@ from floodsystem.stationdata import build_station_list
 
 coordinate = (52.2053, 0.1218)
 
-output = stations_by_distance(build_station_list(), coordinate)
+def closest_stations(coordinate):
+    output = stations_by_distance(build_station_list(), coordinate)
 
-final = [(station[0].name, station[0].town, station[1]) for station in output]
+    final = [(station[0].name, station[0].town, round(station[1], 2)) for station in output]
 
-print(final[:10])
-print(final[-10:])
+   
+    return final
 
-#print(get_station_town())
+
+x = closest_stations(coordinate)
+print(x[:10])
+print(x[-10:])
