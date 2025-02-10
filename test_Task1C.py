@@ -1,6 +1,4 @@
-from floodsystem.geo import stations_within_radius
 from floodsystem.stationdata import build_station_list
-import numpy as np
 from Task1C import task_1C
 from List_of_stations import List_of_stations
 

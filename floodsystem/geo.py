@@ -57,9 +57,9 @@ def rivers_by_station_number(stations, N):
     print((river_list)[:N])
     return((river_list)[:N])
     
-
+#This is used for 1B to find the stations by distance from a given point
 def stations_by_distance(stations, p):
-    radius = 6378
+    #radius = 6378
     #This function is supposed to calculate the distance between two points
     distances = []
     
