@@ -17,3 +17,4 @@ def closest_stations(coordinate):
 x = closest_stations(coordinate)
 print(x[:10])
 print(x[-10:])
+
