@@ -7,12 +7,15 @@ geographical data.
 """
 
 import numpy as np
-from .utils import sorted_by_key
+from floodsystem.utils import sorted_by_key
 from haversine import haversine
+from floodsystem.stationdata import build_station_list
+from List_of_stations import List_of_stations
 
+#Task D
 def rivers_with_station(stations):
     from floodsystem.stationdata import build_station_list
-    stations = build_station_list()
+    
     stations_d = set()
     for station in stations:
         if station.river:
@@ -22,11 +25,10 @@ def rivers_with_station(stations):
     return(len(stations_d)), sorted(stations_d)[:10]
     
     
-    
-
+'''
 def stations_by_river(stations):
     from floodsystem.stationdata import build_station_list
-    stations = build_station_list()
+    #stations = build_station_list()
     stations_ra = set()
     stations_rc = set()
     stations_rt = set()
@@ -43,11 +45,28 @@ def stations_by_river(stations):
             stations_rt.add(station.name)
     print("Stations by River Thames:",sorted(stations_rt))
     return(stations_ra, stations_rc, stations_rt)
+'''
+def stations_by_river(stations, river):
+    
+    #stations = build_station_list()
+    stations_ra = set()
+    for station in stations:
+        if station.river == river:
+            stations_ra.add(station.name)
+    print("Stations by" + river,sorted(stations_ra))
+    
+    return(stations_ra)
 
+x = 'River Aire'
+print(stations_by_river(build_station_list, x))
+x = 'River Cam'
+print(stations_by_river(build_station_list, x))
+x = 'River Thames'
+print(stations_by_river(build_station_list, x))
 
 def rivers_by_station_number(stations, N):
     from floodsystem.stationdata import build_station_list
-    stations = build_station_list()
+    #stations = build_station_list()
     rivers_station_count = {}
     for station in stations:
         if station.river:

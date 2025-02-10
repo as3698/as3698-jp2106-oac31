@@ -2,6 +2,11 @@ from floodsystem.geo import stations_by_distance
 from floodsystem.geo import stations_within_radius
 from floodsystem.stationdata import build_station_list
 from List_of_stations import List_of_stations
+from floodsystem.geo import rivers_with_station
+from floodsystem.stationdata import build_station_list
+from floodsystem.geo import stations_by_river
+import pytest
+
 '''
 def test_geo_radius():
     stations = build_station_list()
@@ -39,3 +44,12 @@ def test_geo_distance_2():
     assert station_names == ['s3', 's4', 's2', 's5', 's1']
 
 
+def test_geo_rivers_with_station():
+    stations = List_of_stations()
+    output = rivers_with_station(stations)
+    assert output == (5, ['river1', 'river2', 'river3', 'river4', 'river5'])
+
+def test_geo_stations_by_river():
+    stations = List_of_stations()
+    output = rivers_with_station(stations)
+    assert output == 

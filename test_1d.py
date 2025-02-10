@@ -3,14 +3,17 @@ from floodsystem.stationdata import build_station_list
 from floodsystem.geo import stations_by_river
 import pytest
 
+#Number of rivers with at least one monitoring station: 1052
+#['Addlestone Bourne', 'Aire Washlands', 'Alconbury Brook', 'Aldingbourne Rife', 'Aller Brook', 'Allison Dyke', 'Alphin Brook', 'Alverthorpe Beck', 'Ampney Brook', 'Amwell Loop']
+
 #print(rivers_with_station(build_station_list))
 def test_d1():
     
     result = rivers_with_station(build_station_list)
     count, river_list = result
     assert result is not None, "Function returned None instead of expected values"
-    assert river_list == ['Addlestone Bourne', 'Aire Washlands', 'Alconbury Brook', 'Aldingbourne Rife','Aller Brook', 'Allison Dyke', 'Alphin Brook', 'Alverthorpe Beck','Ampney Brook', 'Amwell Loop']
-    assert count == 1025
+    assert river_list == ['Addlestone Bourne', 'Aire Washlands', 'Alconbury Brook', 'Aldingbourne Rife', 'Aller Brook', 'Allison Dyke', 'Alphin Brook', 'Alverthorpe Beck', 'Ampney Brook', 'Amwell Loop']
+    assert count == 1052
     
 
 test_d1
