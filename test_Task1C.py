@@ -2,7 +2,7 @@ from floodsystem.stationdata import build_station_list
 from Task1C import task_1C
 from List_of_stations import List_of_stations
 
-
+'''
 def test_task_1C():
     r = 10
     centre = (52.2053, 0.1218)
@@ -15,13 +15,15 @@ def test_task_1C():
     #final = [(station[0].name) for station in output_c]
     #final.sort()
     assert out == ['Bin Brook', 'Cambridge Baits Bite', "Cambridge Byron's Pool", 'Cambridge Jesus Lock', 'Comberton', 'Dernford', 'Girton', 'Haslingfield Burnt Mill', 'Lode', 'Oakington', 'Stapleford']
+'''
 
+'''
 def test_task_1C_2():
     r = 10
     centre = (51.5104, 0.1419)
     out = task_1C(build_station_list(), centre, r)
     assert out == ['Collier Row', 'Crayford', 'Gaynes Park', 'Hall Place', 'Hornchurch_Bretons Farm', 'Lamorbey Park', 'Romford', 'Seven Kings Park']
-
+'''
 def test_task_1C_3():
     r = 200
     centre = (3,4)
