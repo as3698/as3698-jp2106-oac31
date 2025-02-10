@@ -75,9 +75,10 @@ def stations_by_distance(stations, p):
     
     return sorted_data
 
+#This is used for 1C to find the stations within a certain radius of a given point
 def stations_within_radius(stations, centre, r):
     within = []
-    radius = 6378
+    #radius = 6378
     for station in stations:
         lat_1 = (centre[0])
         lon_1 = (centre[1])

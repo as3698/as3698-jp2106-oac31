@@ -8,6 +8,7 @@ import numpy as np
 r = 10
 centre = (52.2053, 0.1218)
 
+
 def task_1C(centre, r):
     stations = build_station_list()
 

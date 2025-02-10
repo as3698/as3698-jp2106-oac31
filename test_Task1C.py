@@ -16,3 +16,9 @@ def test_task_1C():
     #final = [(station[0].name) for station in output_c]
     #final.sort()
     assert out == ['Bin Brook', 'Cambridge Baits Bite', "Cambridge Byron's Pool", 'Cambridge Jesus Lock', 'Comberton', 'Dernford', 'Girton', 'Haslingfield Burnt Mill', 'Lode', 'Oakington', 'Stapleford']
+
+def test_task_1C_2():
+    r = 10
+    centre = (51.5104, 0.1419)
+    out = task_1C(centre, r)
+    assert out == ['Collier Row', 'Crayford', 'Gaynes Park', 'Hall Place', 'Hornchurch_Bretons Farm', 'Lamorbey Park', 'Romford', 'Seven Kings Park']
