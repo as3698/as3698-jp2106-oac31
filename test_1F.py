@@ -1,12 +1,10 @@
-from floodsystem.stationdata import build_station_list
+from Olivers_Fantastic_Dataset import List_of_stations
 from floodsystem.station import inconsistent_typical_range_stations
 
+
 def test_1f():
-    #Test takes two locations, one known to have consistent data (Gaw Bridge), and one known to have inconsistent data (Braunton)
-    #Test checks that only Braunton is returned from the inconsistent_typical_range_stations function
-    stations = build_station_list()
-    test_stations = []
-    for station in stations:
-        if station.name in ['Gaw Bridge', 'Braunton']:
-            test_stations.append(station)
-    assert(inconsistent_typical_range_stations(test_stations) == ['Braunton'])
+    stations = List_of_stations()
+    inconsistent_stations = inconsistent_typical_range_stations(stations)
+    assert('s2' in inconsistent_stations)
+    assert('s3' in inconsistent_stations)
+    assert(len(inconsistent_stations) == 2)

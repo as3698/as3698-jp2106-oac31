@@ -1,4 +1,3 @@
-
 def List_of_stations():
   class list_for_testing:
     def __init__(self, name, label, coord, river, town, typical_range):
