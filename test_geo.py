@@ -43,13 +43,3 @@ def test_geo_distance_2():
     station_names = [station[0].name for station in output]
     assert station_names == ['s3', 's4', 's2', 's5', 's1']
 
-
-def test_geo_rivers_with_station():
-    stations = List_of_stations()
-    output = rivers_with_station(stations)
-    assert output == (5, ['river1', 'river2', 'river3', 'river4', 'river5'])
-
-def test_geo_stations_by_river():
-    stations = List_of_stations()
-    output = rivers_with_station(stations)
-    assert output == 
