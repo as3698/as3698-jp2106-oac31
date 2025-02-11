@@ -13,21 +13,19 @@ def test_d1():
     result = rivers_with_station(List_of_stations())
     assert('river1' in result)
     assert('river2' not in result)
-    assert('river3' in result)
+    assert('river3' not in result)
     assert('river4' in result)
     assert('river5' in result)
-    
 
 test_d1
-
 def test_d2():
 
     result = stations_by_river(List_of_stations())
-    assert(len(result) == 4)
-    assert(result['river1'] == ['s1'])
-    assert(result['river3'] == ['s3'])
+    assert(len(result) == 3)
+    assert(result['river1'] == ['s1', 's3'])
     assert(result['river4'] == ['s4'])
     assert(result['river5'] == ['s5'])
+    return(result)
 #    r1, r2, r3 = result
 #    assert result is not None, "Function returned None instead of expected values"
 #    assert r1 ==  ['Airmyn', 'Apperley Bridge', 'Armley', 'Beal Weir Bridge', 'Bingley', 'Birkin Holme Washlands', 'Carlton Bridge', 'Castleford', 'Chapel Haddlesey', 'Cononley', 'Cottingley Bridge', 'Ferrybridge Lock', 'Fleet Weir', 'Gargrave High Street', 'Kildwick', 'Kirkstall Abbey', 'Knottingley Bank Dole Lock', 'Leeds Crown Point', 'Leeds Crown Point Flood Alleviation Scheme', 'Leeds Knostrop Weir Flood Alleviation Scheme', 'Oulton Lemonroyd', 'Saltaire', 'Snaygill', 'Stockbridge']

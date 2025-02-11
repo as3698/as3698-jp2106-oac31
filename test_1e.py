@@ -5,8 +5,6 @@ from Olivers_Fantastic_Dataset import List_of_stations
 
 def test_1e():
     output = rivers_by_station_number(List_of_stations(),1)
-    #assert output == [('river1', 1), ('river3', 1), ('river4', 1), ('river5', 1)]
+    assert output == [('river1', 2)]
     return output
-#test_1e
-
-print(test_1e())
+test_1e
