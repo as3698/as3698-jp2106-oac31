@@ -46,6 +46,15 @@ def rivers_by_station_number(stations, N):
             rivers_station_count[station.river] = rivers_station_count.get(station.river, 0) + 1
     river_list = list(rivers_station_count.items())
     river_list.sort(key=lambda x: x[1], reverse=True)
+    val = 0
+    while val == 0:
+        try:
+            if river_list[N + 1][1] == river_list[N][1]:
+                N += 1
+            else:
+                val = 1
+        except IndexError:
+            val = 1
     return((river_list)[:N])
     
 #This is used for 1B to find the stations by distance from a given point
