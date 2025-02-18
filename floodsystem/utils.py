@@ -32,7 +32,8 @@ def sorted_by_key(x, i, reverse=False):
 
     return sorted(x, key=key, reverse=reverse)
 
-def level_history(station_name):
+#Jaiden added to output the water levels of a station over the past input days
+def level_history(station_name, dt):
 
     # Build list of stations
     stations = build_station_list()
@@ -53,7 +54,6 @@ def level_history(station_name):
         return
 
     # Fetch data over past 2 days
-    dt = 10
     dates, levels = fetch_measure_levels(
         station_cam.measure_id, dt=datetime.timedelta(days=dt))
     
@@ -71,19 +71,13 @@ def level_history(station_name):
     
 
 
-
+#Jaiden added to output the current water levels of all stations
 def current_level():
     # Build list of stations
     stations = build_station_list()
 
     # Update latest level data for all stations
     update_water_levels(stations)
-
-    # Print station and latest level for first 5 stations in list
-    names = [
-        'Bourton Dickler', 'Surfleet Sluice', 'Gaw Bridge', 'Hemingford',
-        'Swindon'
-    ]
     things = []
     for station in stations:
       things.append((station.name, station.latest_level))
