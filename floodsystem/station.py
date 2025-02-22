@@ -62,6 +62,9 @@ class MonitoringStation:
         else:
             low, high = self.typical_range
             return (self.latest_level - low) / (high - low)
+        
+
+
     
     
 
@@ -73,6 +76,7 @@ def inconsistent_typical_range_stations(stations):
         if station.typical_range_consistent() == False:
             inconsistent_stations.append(station.name)
     return(inconsistent_stations)
+
 
    
 
