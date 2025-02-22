@@ -6,6 +6,8 @@ for manipulating/modifying station data
 
 """
 
+
+
 class MonitoringStation:
     """This class represents a river level monitoring station"""
 
@@ -53,6 +55,16 @@ class MonitoringStation:
         #If passed both these tests it returns True
         else:
             return(True)
+            
+    def relative_water_level(self):
+        if not self.typical_range_consistent() or self.latest_level is None:
+            return None
+        else:
+            low, high = self.typical_range
+            return (self.latest_level - low) / (high - low)
+    
+    
+
         
 def inconsistent_typical_range_stations(stations):
     inconsistent_stations = []
@@ -61,3 +73,8 @@ def inconsistent_typical_range_stations(stations):
         if station.typical_range_consistent() == False:
             inconsistent_stations.append(station.name)
     return(inconsistent_stations)
+
+   
+
+
+
