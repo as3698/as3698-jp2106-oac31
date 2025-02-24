@@ -8,13 +8,16 @@ from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.stationdata import build_station_list
 
 
+
+
+
 def run():
 
     # Build list of stations
     stations = build_station_list()
 
     # Station name to find
-    station_name = "Cam"
+    station_name = "Bourton Dickler"
 
     # Find station
     station_cam = None
