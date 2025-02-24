@@ -8,5 +8,5 @@ stations = build_station_list()
 update_water_levels(stations)
 N = 10
 things = stations_highest_rel_level(stations, N)
-for station in things:
-    print(station)  
+for station_name, relative_level in things:
+    print(station_name, relative_level)   

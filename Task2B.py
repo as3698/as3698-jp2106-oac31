@@ -7,5 +7,5 @@ tol = 0.8
 stations = build_station_list()
 update_water_levels(stations)
 things = stations_level_over_threshold(stations, tol)
-for station in things:
-    print(station)
+for station_name, relative_level in things:
+    print(station_name, relative_level)
