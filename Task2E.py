@@ -31,5 +31,18 @@ for s in stations:
         station = s
         break
 '''
-print(current_level())
-#print(stations)
+plot_water_levels(station, dates, levels)
+#Station is a  monitoring station object
+
+
+for s in stations:
+    if s.name == station_name:
+        station = s
+        break
+
+#Find list of 5 stations with highest relative water levels
+stations
+#Return data for each station over the last 10 days
+
+#Plot the data for each station
+
