@@ -36,10 +36,10 @@ for object in station_names:
 
 
 
-dates, levels = level_history("Bourton Dickler", 2)
-dates_filtered = matplotlib.dates.date2num(dates)
-degree = 3
-poly, d0 = polyfit(dates_filtered, levels, degree)
+#dates, levels = level_history("Bourton Dickler", 2)
+#dates_filtered = matplotlib.dates.date2num(dates)
+#degree = 3
+#poly, d0 = polyfit(dates_filtered, levels, degree)
 
 
 
