@@ -10,12 +10,5 @@ def polyfit(old_dates, levels, p):
     d0 = dates[0]
     return poly, d0
 
-
-
-#dates, levels = level_history("Bourton Dickler", 10)
-
-#degree = 6
-#poly, d0 = polyfit(dates, levels, degree)
-#print(poly)
-#print(d0)
-
+old_dates = [1,2,3,4,5]
+levels = old_dates
