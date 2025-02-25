@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Garth N. Wells
+t# Copyright (C) 2018 Garth N. Wells
 #
 # SPDX-License-Identifier: MIT
 """Unit test for the stationdata module"""
