@@ -15,7 +15,8 @@ def test_polyfit_1():
         item = round(item, 4)
         item = int(item)
         test.append(item)
-    assert test == [86400000000, -84878, 0]
+    d0 = round(d0, 4)
+    assert test == [86400000000, -84878, 0] and d0 == 0.0
     #print(test)
     
 
@@ -29,8 +30,8 @@ def test_polyfit_2():
         item = round(item, 4)
         item = int(item)
         test.append(item)
-    assert test == [86399999999, 1964169, 0]
-    #print(test)
+    d0 = round(d0, 4)
+    assert test == [86399999999, 1964169, 0] and d0 == 0.0
 
 
 
