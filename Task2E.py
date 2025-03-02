@@ -10,35 +10,10 @@ from floodsystem.plot import plot_water_levels
 from floodsystem.station import MonitoringStation
 
 
-
-#Typical Range outputs a tuple
-'''
-station = "Bourton Dickler"
-data = run(station)
-data_tuples = [line.split() for line in data]
-dates = [datetime.strptime(date + " " + time, "%Y-%m-%d %H:%M:%S%z") for date, time, level in data_tuples]
-levels = [float(level) for date, time, level in data_tuples]
-print(dates)
-'''
-
-'''
-data = level_history(station)
-dates = data[0]
-levels = data[1]
-station_name = "Bourton Dickler"
-station = None
-
-#def highest_level(stations):
-
-
-
-for s in stations:
-    if s.name == station_name:
-        station = s
-        break
-'''
-
+#This code is used to plot the water levels of the 5 stations with the highest relative water levels over the last 10 days
 #Station is a  monitoring station object
+
+
 number = 5
 days = 10
 n = 0

@@ -10,7 +10,7 @@ from floodsystem.plot import plot_water_level_with_fit
 from floodsystem.station import MonitoringStation
 
 
-
+#This code is used to plot the water levels of the 5 stations with the highest relative water levels over the last 10 days
 #Station is a  monitoring station object
 number = 5
 days = 10
