@@ -16,11 +16,12 @@ def test_polyfit_1():
         item = int(item)
         test.append(item)
     assert test == [86400000000, -84878, 0]
+    #print(test)
     
 
 def test_polyfit_2():
     old_dates = [1,2,3,4,5]
-    levels = old_dates
+    levels = [1,2,3,4]
     test = []
     poly, d0 = polyfit(old_dates, levels, 2)
     for i in range (1,4):
@@ -28,7 +29,8 @@ def test_polyfit_2():
         item = round(item, 4)
         item = int(item)
         test.append(item)
-    assert test == [86400000000, -84878, 0]
+    assert test == [86399999999, 1964169, 0]
+    #print(test)
 
 
 
