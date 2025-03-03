@@ -11,7 +11,7 @@ def test_plot_water_levels_1():
     levels = dates
     stations = List_of_stations()
     station = stations[0]
-    output = plot_water_levels(station, dates, levels)
+    output = plot_water_levels(station, dates, levels, test=True)
     #print(output)
     assert output == 'Data Plotted'
 
@@ -21,7 +21,7 @@ def test_plot_water_levels_2():
     levels = [1,2,3,4,5]
     stations = List_of_stations()
     station = stations[0]
-    output =  plot_water_levels(station, dates, levels)
+    output =  plot_water_levels(station, dates, levels, test=True)
     #print(output)
     assert output == 'Data Corrupted'
 
@@ -30,7 +30,7 @@ def test_plot_water_levels_3():
     levels = [1,2,3,4,5,None]
     stations = List_of_stations()
     station = stations[0]
-    output =  plot_water_levels(station, dates, levels)
+    output =  plot_water_levels(station, dates, levels, test=True)
     #print(output)
     assert output == 'Data Corrupted'
 
@@ -40,7 +40,7 @@ def test_plot_water_level_with_fit_1():
     stations = List_of_stations()
     station = stations[0]
     p = 4
-    output = plot_water_level_with_fit(station, dates, levels, 2)
+    output = plot_water_level_with_fit(station, dates, levels, 2, test=True)
     #print(output)
     assert output == 'Data Plotted'
 
@@ -50,7 +50,7 @@ def test_plot_water_level_with_fit_2():
     stations = List_of_stations()
     station = stations[0]
     p = 4
-    output = plot_water_level_with_fit(station, dates, levels, 2)
+    output = plot_water_level_with_fit(station, dates, levels, 2, test=True)
     #print(output)
     assert output == 'Data Corrupted'
 
@@ -60,7 +60,7 @@ def test_plot_water_level_with_fit_3():
     stations = List_of_stations()
     station = stations[0]
     p = 4
-    output = plot_water_level_with_fit(station, dates, levels, 2)
+    output = plot_water_level_with_fit(station, dates, levels, 2, test=True)
     #print(output)
     assert output == 'Data Corrupted'
 
