@@ -63,9 +63,6 @@ cleaned_data = [(name, coords, float(dist)) for name, coords, dist in list_of_tu
 
 
 
--------------
-
-
 #from .utils import sorted_by_key  # noqa
 from floodsystem.utils import sorted_by_key
 from floodsystem.station import MonitoringStation

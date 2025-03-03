@@ -59,6 +59,7 @@ def level_history(station_name, dt):
     
     things = []
     things_2 = []
+    
 
     # Print level history
     for date, level in zip(dates, levels):
@@ -66,7 +67,8 @@ def level_history(station_name, dt):
         things.append((date))
         things_2.append((level))
 
-    
+    things.reverse()
+    things_2.reverse()
     return things, things_2
     
 
