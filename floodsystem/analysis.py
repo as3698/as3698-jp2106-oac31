@@ -18,7 +18,8 @@ def polyfit(old_dates, levels, p):
     p_coeff = np.polyfit(dates, levels, p)
     poly = np.poly1d(p_coeff)
     d0 = dates[0]
-    return poly, d0
+    output = (poly, d0)
+    return output
 
 
 
