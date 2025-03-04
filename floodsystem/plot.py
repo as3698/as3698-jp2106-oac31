@@ -10,7 +10,7 @@ def plot_water_levels(station, dates, levels, test=False):
     if len(dates) != len(levels) or None in levels or None in dates:
         return('Data Corrupted')
     else:
-        for i in range (5):
+        for i in range (10):
             try:
                 plt.plot(dates, levels, label='water level')
                 break
@@ -44,7 +44,7 @@ def plot_water_level_with_fit(station, old_dates, levels, p, test=False):
         subtractor = dates[0]
         p_coeff = np.polyfit(dates - subtractor, levels, p)
         poly = np.poly1d(p_coeff)
-        for i in range (5):
+        for i in range (10):
             try:
                 plt.plot(old_dates, levels, '.', label='water level')
                 break
